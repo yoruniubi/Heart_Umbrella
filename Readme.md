@@ -19,7 +19,8 @@
 ## 安装 (Installation)
 
 ### 从 Firefox Add-ons 安装 (Install from Firefox Add-ons)
-(待发布后提供链接)
+
+直接在Firefox Add-ons中搜索"心伞 - 治愈小助手"
 
 ### 手动安装 (Manual Installation)
 1. 下载并解压本项目的代码。
