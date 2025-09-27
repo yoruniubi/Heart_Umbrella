@@ -38,4 +38,4 @@ https://addons.mozilla.org/addon/%E5%BF%83%E4%BC%9E-%E6%B2%BB%E6%84%88%E5%B0%8F%
 Contributions to this project are welcome! If you have any suggestions, feature requests, or bug reports, please feel free to submit an Issue or Pull Request.
 
 ## License
-This project is licensed under the MIT License. Please refer to the `LICENSE` file (if it exists) for details.
+This project is licensed under the MIT License. Please refer to the `LICENSE` file.
