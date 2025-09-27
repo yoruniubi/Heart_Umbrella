@@ -37,4 +37,4 @@ https://addons.mozilla.org/addon/%E5%BF%83%E4%BC%9E-%E6%B2%BB%E6%84%88%E5%B0%8F%
 欢迎对本项目进行贡献！如果您有任何建议、功能请求或 Bug 报告，请随时提交 Issue 或 Pull Request。
 
 ## 许可证 (License)
-本项目采用 MIT 许可证。详情请参阅 `LICENSE` 文件 (如果存在)。
+本项目采用 MIT 许可证。详情请参阅 `LICENSE` 文件。
