@@ -14,8 +14,6 @@
 ## Features
 - **Smart Word Blocking**: Automatically blocks unwanted words on web pages according to your settings.
 - **Mind Healing**: While blocking words, it provides encouraging and comforting messages to help you maintain a positive mindset.
-- **Intuitive Pop-up Interface**: Quickly access extension functions and status.
-- **Personalized Settings**: Through the options page, you can customize your blocked word list and healing messages.
 
 ## Installation
 
