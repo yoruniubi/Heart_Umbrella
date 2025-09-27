@@ -1,0 +1,101 @@
+/* 治愈风格的内容样式 */
+.healing-blocked-content {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(135deg, #ffecd2, #fcb69f) !important;
+  color: #666 !important;
+  padding: 2px 8px !important;
+  border-radius: 12px !important;
+  font-size: 0.9em !important;
+  margin: 0 2px !important;
+  animation: gentlePulse 3s infinite ease-in-out !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+  border: 1px solid rgba(255,255,255,0.4) !important;
+  backdrop-filter: blur(10px) !important;
+  font-weight: 500 !important;
+  transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) !important;
+  cursor: help !important;
+  z-index: 1 !important;
+}
+
+.healing-blocked-content:hover {
+  transform: translateY(-1px) scale(1.02) !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15) !important;
+  background: linear-gradient(135deg, #fff5e6, #ffe0cc) !important;
+}
+
+@keyframes gentlePulse {
+  0%, 100% {
+    opacity: 0.85;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.01);
+  }
+}
+
+/* 工具提示样式 */
+.healing-blocked-content::after {
+  content: "💝 这里的内容被温柔守护着";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 10000;
+  margin-top: 8px;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.healing-blocked-content:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .healing-blocked-content {
+    font-size: 0.85em !important;
+    padding: 1px 6px !important;
+  }
+  
+  .healing-blocked-content::after {
+    font-size: 11px !important;
+    padding: 6px 10px !important;
+  }
+}
+
+/* 确保不影响页面布局 */
+.healing-blocked-content {
+  vertical-align: baseline !important;
+  line-height: inherit !important;
+}
+
+/* 防止内容选择时的问题 */
+.healing-blocked-content::selection {
+  background: rgba(255, 154, 158, 0.3) !important;
+}
+
+/* 深色主题适配 */
+@media (prefers-color-scheme: dark) {
+  .healing-blocked-content {
+    background: linear-gradient(135deg, #2d1b69, #11998e) !important;
+    color: #e0e0e0 !important;
+    border-color: rgba(255,255,255,0.2) !important;
+  }
+  
+  .healing-blocked-content:hover {
+    background: linear-gradient(135deg, #3d2b79, #21aa9e) !important;
+  }
+}

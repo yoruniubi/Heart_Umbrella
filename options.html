@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n-key="appTitle"></title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header-content">
+        <div class="logo">
+          <div class="heart-icon">💕</div>
+          <h1 data-i18n-key="appName"></h1>
+        </div>
+        <p class="subtitle" data-i18n-key="appSubtitle"></p>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="settings-section">
+        <div class="section-header">
+          <h2 data-i18n-key="blockWordsTitle">🛡️ 屏蔽词汇管理</h2>
+          <p data-i18n-key="blockWordsSubtitle">管理你不想看到的词汇，让浏览更舒心</p>
+        </div>
+
+        <div class="add-word-form">
+          <div class="input-group">
+            <input type="text" id="newWordInput" data-i18n-placeholder="newWordInputPlaceholder" maxlength="50">
+            <button class="add-btn" id="addWordBtn">
+              <span class="btn-icon">➕</span>
+              <span data-i18n-key="addBtn">添加</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="words-container">
+          <div class="words-header">
+            <span class="count-badge" id="wordCount">0</span>
+            <span data-i18n-key="blockedWordsCountLabel">个屏蔽词汇</span>
+            <button class="clear-all-btn" id="clearAllBtn">
+              <span class="btn-icon">🗑️</span>
+              <span data-i18n-key="clearAllBtn">清空全部</span>
+            </button>
+          </div>
+          <div class="words-list" id="wordsList">
+            <div class="empty-state" id="emptyState">
+              <div class="empty-icon">🌸</div>
+              <p data-i18n-key="emptyStateMessage">还没有添加屏蔽词汇</p>
+              <p class="empty-hint" data-i18n-key="emptyStateHint">添加一些你不想看到的词汇，让浏览体验更纯净</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="settings-section">
+        <div class="section-header">
+          <h2 data-i18n-key="usageStatsTitle">📊 使用统计</h2>
+          <p data-i18n-key="usageStatsSubtitle">查看小助手为你守护的成果</p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">🛡️</div>
+            <div class="stat-info">
+              <span class="stat-number" id="totalBlocked">0</span>
+              <span class="stat-label" data-i18n-key="totalBlockedLabel">总计守护</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🌟</div>
+            <div class="stat-info">
+              <span class="stat-number" id="totalEncouragement">0</span>
+              <span class="stat-label" data-i18n-key="totalEncouragementLabel">鼓励次数</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">💝</div>
+            <div class="stat-info">
+              <span class="stat-number" id="daysUsed">1</span>
+              <span class="stat-label" data-i18n-key="daysUsedLabel">使用天数</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="settings-section">
+        <div class="section-header">
+          <h2 data-i18n-key="featureSettingsTitle">⚙️ 功能设置</h2>
+          <p data-i18n-key="featureSettingsSubtitle">个性化你的使用体验</p>
+        </div>
+
+        <div class="settings-grid">
+          <div class="setting-item">
+            <div class="setting-info">
+              <h3 data-i18n-key="autoBlockTitle">自动屏蔽</h3>
+              <p data-i18n-key="autoBlockSubtitle">自动检测并屏蔽设定的词汇</p>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="autoBlock" checked>
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+
+          <div class="setting-item">
+            <div class="setting-info">
+              <h3 data-i18n-key="showStatsTitle">显示统计</h3>
+              <p data-i18n-key="showStatsSubtitle">在弹窗中显示屏蔽统计信息</p>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="showStats" checked>
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+
+          <div class="setting-item">
+            <div class="setting-info">
+              <h3 data-i18n-key="gentleModeTitle">温柔模式</h3>
+              <p data-i18n-key="gentleModeSubtitle">使用更柔和的替换文字</p>
+            </div>
+            <label class="toggle-switch">
+              <input type="checkbox" id="gentleMode" checked>
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          <div class="setting-item"> 
+            <div class="setting-info">
+              <h3 data-i18n-key="languageSettingTitle">语言设置</h3>
+              <p data-i18n-key="languageSettingSubtitle">选择偏好语言</p>
+            </div>
+            <div class="custom-select" id="languageSelect">
+              <div class="select-selected">中文</div>
+              <div class="select-items select-hide">
+                <div data-value="zh-CN" data-i18n-key="langChinese">中文</div>
+                <div data-value="en" data-i18n-key="langEnglish">English</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="actions-section">
+        <button class="action-btn primary" id="resetBtn">
+          <span class="btn-icon">🔄</span>
+          <span data-i18n-key="resetSettingsBtn">重置所有设置</span>
+        </button>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p data-i18n-key="footerText1">💝 治愈小助手 v1.0.0 - 用科技传递温暖</p>
+      <p data-i18n-key="footerText2">让每一次浏览都充满正能量 🌈</p>
+  </div>
+
+  <input type="file" id="importFile" accept=".json" style="display: none;">
+  <script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n-key="popupTitle">治愈小助手</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo">
+        <div class="heart-icon">💕</div>
+        <h1 data-i18n-key="appName">治愈小助手</h1>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="stats-card">
+        <div class="stat-item">
+          <span class="stat-number" id="blockedCount">0</span>
+          <span class="stat-label" data-i18n-key="popupTodayProtection">今日守护</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" id="encouragementCount">0</span>
+          <span class="stat-label" data-i18n-key="popupPositiveEnergy">正能量</span>
+        </div>
+      </div>
+
+      <div class="encouragement-section">
+        <div class="encouragement-card" id="encouragementCard">
+          <p class="encouragement-text" id="encouragementText" data-i18n-key="popupEncouragementText">
+            ✨ 每一天都是新的开始，你值得所有美好的事物
+          </p>
+        </div>
+        <button class="encourage-btn" id="encourageBtn" data-i18n-key="popupGetEncouragementBtn">
+          <span class="btn-icon">🌟</span>
+          <span class ="btn-text">获取鼓励</span>
+        </button>
+      </div>
+
+      <div class="quick-actions">
+        <button class="action-btn" id="addWordBtn" data-i18n-key="popupAddBlockedWordBtn">
+          <span class="btn-icon">🛡️</span>
+          <span class="btn-text">添加屏蔽词</span> 
+        </button>
+        <button class="action-btn" id="settingsBtn" data-i18n-key="popupSettingsBtn">
+          <span class="btn-icon">⚙️</span>
+          <span class="btn-text">设置</span>
+        </button>
+    </div>
+
+      <div class="add-word-section" id="addWordSection" style="display: none;">
+        <div class="input-group">
+          <input type="text" id="wordInput" data-i18n-placeholder="newWordInputPlaceholder" placeholder="输入要屏蔽的词汇..." maxlength="50">
+          <button class="add-btn" id="confirmAddBtn" data-i18n-key="addBtn">添加</button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p data-i18n-key="popupFooterText">让世界变得更温暖 🌈</p>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

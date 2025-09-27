@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "心伞 - 治愈小助手",
+  "version": "1.0.1",
+  "description": "温柔地屏蔽不想看的词汇，用鼓励和安慰治愈你的心灵",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "heart_umbrella@example.com"
+    }
+  },
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "治愈小助手"
+  },
+  "options_page": "options.html",
+  "icons": {
+    "16": "public/icon.png",
+    "32": "public/icon.png",
+    "48": "public/icon.png"
+  }
+}
