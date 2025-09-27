@@ -20,7 +20,7 @@
 ## Installation
 
 ### Install from Firefox Add-ons
-(Link will be provided after release)
+https://addons.mozilla.org/addon/%E5%BF%83%E4%BC%9E-%E6%B2%BB%E6%84%88%E5%B0%8F%E5%8A%A9%E6%89%8B/
 
 ### Manual Installation
 1. Download and unzip the project code.
